@@ -1,0 +1,36 @@
+using System;
+
+namespace teste_pratico1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 0, b = 1, c = a + b, cont = 3; //Informando números
+
+            Console.WriteLine("Digite um número: ");
+            int numInformado = int.Parse(Console.ReadLine());
+
+            if (numInformado == 0 || numInformado == 1)//Verifica se não e 0 ou 1
+            {
+                Console.WriteLine($"{numInformado} pertence à sequência de Fibonacci.");
+                return;
+            }
+
+            while (c < numInformado)//Verifica
+            {
+                a = b;
+                b = c;
+                c = a + b;
+                cont +=1;
+            }
+
+            if (c == numInformado) /* Informa a pessoa */{
+                Console.WriteLine($"{numInformado} pertence à sequência de Fibonacci.\nEste e o: {cont} número da sequência");
+            }
+            else{
+                Console.WriteLine($"O número {numInformado} NÃO pertence à sequência de Fibonacci.\nEste e o: {cont} número da sequência");
+            }
+        }
+    }
+}
