@@ -1,1 +1,28 @@
+using System;
 
+namespace teste_pratico2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int cont = 0;
+            string frase;
+
+            Console.WriteLine("Digite uma frase: ");
+            frase = Console.ReadLine();
+
+
+            for (int i = 0; i < frase.Length; i++) // Passa pela frase 
+            {
+                char letra = frase[i];
+                if (letra == 'a' || letra == 'A') // Localiza A e conta
+                {
+                    cont++;
+                }
+            }
+
+            Console.WriteLine($"A letra 'a' ou 'A' aparece {cont} vezes na frase");
+        }
+    }
+}
